@@ -1,4 +1,7 @@
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
+
+#
 LARRYCHATTER
 ============
 Introducing a  super-stealthy  extra sneaky Python-based Implant that uses Twitter & Dropbox as a C2 Server.
