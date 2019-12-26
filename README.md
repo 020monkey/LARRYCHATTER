@@ -6,7 +6,7 @@
 # LARRYCHATTER
 
 ## Introduction:
-Introducing a  super-stealthy extra sneaky Python-based Implant Framework that uses Twitter & Dropbox as a C2 Server.
+Introducing a  super-stealthy extra sneaky Python-based C2 Framework that uses Twitter & Dropbox as a C2 Server.
 This project has been inspired by the Russian threat-group APT-29's own malware HAMMERTOSS tDiscoverer variant.
 In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. It's a lot similiar except that it's better.
 
