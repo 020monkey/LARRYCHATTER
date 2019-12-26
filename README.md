@@ -51,26 +51,21 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 
 ## Guide:
 - Install the required Python dependencies
-
-```pip install -r requirements.txt```
-
+- `pip install -r requirements.txt`
 - Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance.
-
-```python3 LARRYCHATTER_CommandPost.py```
-
+- `python3 LARRYCHATTER_CommandPost.py`
 - Run the LARRYCHATTER_Implant.py on the Windows VM(target machine)
-
-```python LARRYCHATTER_Implant.py```
-
+`python LARRYCHATTER_Implant.py`
 - Run 'recon' module on the Command Post and follow the on-screen instructions
 - Wait for some time for the Implant to collect the intel
 - Check the Dropbox Files section for the uploaded Intel
 - Run 'kill' module on the Command Post to kill the Implant on the target machine
 - Decrypt the Intel with the help of the decrypter.py and Profit!
 
+- Note - Don't forget to change the Encryption keys!
+
 ## To Do:
 - [ ] Integrate Twitter Handle Generation Algorithm
 - [ ] Integrate AV Evasion Routines
 - [ ] Modify the 'recon' module to add more features
 - [ ] Integrate more advanced modules
-
