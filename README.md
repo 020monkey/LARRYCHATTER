@@ -1,8 +1,8 @@
-# [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-# [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-
-# ![screenshot](Logo.png)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+#
+![screenshot](Logo.png)
 # LARRYCHATTER
 
 ## Introduction:
@@ -11,10 +11,10 @@ This project has been inspired by the Russian threat-group APT-29's own malware 
 In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. It's a lot similiar except that it's better.
 
 ## A Simplified Block Diagram First:
-# ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
+![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
 
 ## Another One Of Twitter Handle Generation Algorithm:
-# ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
+![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
 ## Etymology:
 So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you have seen the cute bird in the Twitter logo right? Well her name is Larry and since this Implant communicates over Twitter(chatter), I figured it's only appropiate I name it LARRYCHATTER.
