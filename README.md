@@ -51,9 +51,9 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 
 ## Guide:
 - Install the required Python dependencies
-- `pip install -r requirements.txt`
+`pip install -r requirements.txt`
 - Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance.
-- `python3 LARRYCHATTER_CommandPost.py`
+`python3 LARRYCHATTER_CommandPost.py`
 - Run the LARRYCHATTER_Implant.py on the Windows VM(target machine)
 `python LARRYCHATTER_Implant.py`
 - Run 'recon' module on the Command Post and follow the on-screen instructions
