@@ -24,7 +24,7 @@ LARRYCHATTER Framework consists of:
 - CommandPost - The software which is used to issue commands to the Implant run by the operator.
 - Implant - The main malware which is run on the target machine.
 
-This repository contains two source files:
+This repository contains three source files:
 - ```LARRYCHATTER_CommandPost.py``` which is the source-code of the LARRYCHATTER Command Post(CP).
 - ```LARRYCHATTERImplant.py``` which is the source-code of the LARRYCHATTER Implant.
 - ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
@@ -32,7 +32,7 @@ This repository contains two source files:
 ## Features:
 - No suspicious Internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls)
 - 'kill' module - Terminates the Implant on the target machine.
-- 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
+- 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
 - Basic Steganography integrated.
 - Hardcoded Symmetric Encryption support in-built with 128-bit AES in CBC Mode.
 - Coded in Python 3.
@@ -46,12 +46,12 @@ For this to work you will need:
 - A Twitter Dev Account (**Please use a dedicated account! Do NOT use your personal one!**)
 Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values (I am not gon' tell you guys how, go Google it, should be a pretty easy thing to do)
 Also note down the Handle/Username of your Twitter Account.
-- A Dropbox Account. (**Please use a dedicated account! Do NOT use your personal one!**) 
+- A Dropbox Account. (**Again please use a dedicated account! Do NOT use your personal one!**) 
 Generate an API Token. (Again not gon' explain how, pretty easy to figure it out)
 - A Machine with a Linux VM and a Windows 7/8/10 VM OR two separate machines
 
 ## Guide:
-1. Install the required Python dependencies
+1. Install the required Python dependencies on both machines
 - `pip install -r requirements.txt`
 2. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance
 - `python3 LARRYCHATTER_CommandPost.py`
