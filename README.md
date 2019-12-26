@@ -44,7 +44,7 @@ So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you
 ## Prerequisites:
 For this to work you will need:
 - A Twitter Dev Account (**Please use a dedicated account! Do NOT use your personal one!**)
-Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values (I am not gon' tell you guys how, go Google it, should be a pretty easy thing to do)
+Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values (I am not gon' tell you guys how, go Google it, should be a pretty easy thing to do).
 Also note down the Handle/Username of your Twitter Account.
 - A Dropbox Account. (**Again please use a dedicated account! Do NOT use your personal one!**) 
 Generate an API Token. (Again not gon' explain how, pretty easy to figure it out)
@@ -55,7 +55,7 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 - `pip install -r requirements.txt`
 2. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance.
 - `python3 LARRYCHATTER_CommandPost.py`
-3. Run the LARRYCHATTER_Implant.py on the Windows VM(target machine).
+3. Open the LARRYCHATTER_Implant.py file and modify the variable 'handle' to your created Twitter username and then run the LARRYCHATTER_Implant.py on the Windows VM(target machine).
 - `python LARRYCHATTER_Implant.py`
 4. Run 'recon' module on the Command Post and follow the on-screen instructions. A sample image is included in the repo. The file-size must be less than 5MB for the Framework to work.
 5. Wait for some time for the Implant to collect the intel.
