@@ -34,7 +34,7 @@ This repository contains three source files:
 - 'kill' module - Terminates the Implant on the target machine.
 - 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
 - Basic Steganography integrated.
-- Hardcoded Symmetric Encryption support in-built with 128-bit AES in CBC Mode.
+- Hardcoded symmetric encryption support in-built with 128-bit AES in CBC Mode.
 - Coded in Python 3.
 - Single Implant support only by CommandPost since this is only the prototype.
 
