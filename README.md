@@ -27,15 +27,15 @@ LARRYCHATTER Framework consists of:
 This repository contains two source files:
 - ```LARRYCHATTER_CommandPost.py``` which is the source-code of the LARRYCHATTER Command Post(CP).
 - ```LARRYCHATTERImplant.py``` which is the source-code of the LARRYCHATTER Implant.
-- ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine to Dropbox
+- ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
 
 ## Features:
 - No suspicious Internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls)
-- 'kill' module - Terminates the Implant on the target machine
+- 'kill' module - Terminates the Implant on the target machine.
 - 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
-- Basic Steganography integrated
-- Hardcoded Symmetric Encryption support in-built with 128-bit AES in CBC Mode
-- Coded in Python 3
+- Basic Steganography integrated.
+- Hardcoded Symmetric Encryption support in-built with 128-bit AES in CBC Mode.
+- Coded in Python 3.
 - Single Implant support only by CommandPost since this is only the Prototype.
 
 ## Etymology:
