@@ -64,7 +64,7 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 8. Run 'kill' module on the Command Post to kill the Implant on the target machine
 9. Decrypt the Intel with the help of the decrypter.py and Profit!
 
-###### Note - Don't forget to change the Encryption keys!
+### Note - Don't forget to change the Encryption keys!
 
 ## To Do:
 - [ ] Integrate Twitter Handle Generation Algorithm
