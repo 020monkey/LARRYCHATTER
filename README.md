@@ -1,6 +1,6 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 #
 ![screenshot](Logo.png)
 # LARRYCHATTER
@@ -27,6 +27,7 @@ LARRYCHATTER Framework consists of:
 This repository contains two source files:
 - ```LARRYCHATTER_CommandPost.py``` which is the source-code of the LARRYCHATTER Command Post(CP).
 - ```LARRYCHATTERImplant.py``` which is the source-code of the LARRYCHATTER Implant.
+- ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine to Dropbox
 
 ## Features:
 - No suspicious Internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls)
@@ -52,15 +53,16 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 ## Guide:
 1. Install the required Python dependencies
 - `pip install -r requirements.txt`
-2. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance.
+2. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance
 - `python3 LARRYCHATTER_CommandPost.py`
 3. Run the LARRYCHATTER_Implant.py on the Windows VM(target machine)
 - `python LARRYCHATTER_Implant.py`
 4. Run 'recon' module on the Command Post and follow the on-screen instructions
 5. Wait for some time for the Implant to collect the intel
 6. Check the Dropbox Files section for the uploaded Intel
-7. Run 'kill' module on the Command Post to kill the Implant on the target machine
-8. Decrypt the Intel with the help of the decrypter.py and Profit!
+7. Check Dropbox for the Intel ZIP file, download it and extract it on operator machine
+8. Run 'kill' module on the Command Post to kill the Implant on the target machine
+9. Decrypt the Intel with the help of the decrypter.py and Profit!
 
 ###### Note - Don't forget to change the Encryption keys!
 
