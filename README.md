@@ -16,7 +16,7 @@ In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. I
 ## Another One Of Twitter Handle Generation Algorithm:
 ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
-## What Is LARRYCHATTER Exactly?
+## So What Is LARRYCHATTER Exactly?
 LARRYCHATTER is a cross-platform C2 Framework. Much like Merlin, Sliver, Faction C2, yada yada yada. The only difference is that it uses covert channels over public platforms instead of standard communication over HTTP/HTTPS to attacker-controlled domains which can be detected very easily and also taken down in a jiffy. It's purpose is to make the life of Blue-teamers a lot-less easy! It is primarily aimed at professional red-teamers for red-team engagements. Modules can be written in Python and integrated at the click of a finger. The prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much. My main goal was to show everyone how easily social-media and public platforms can be exploited by malware to communicate with it's operators. Additional modules and advancement of existing ones coming soon, so stay tuned mates ;)
 
 ## Terminology:
