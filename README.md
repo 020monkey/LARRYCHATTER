@@ -17,7 +17,7 @@ In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. I
 ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
 ## So What Is LARRYCHATTER Exactly?
-LARRYCHATTER is a cross-platform C2 Framework. Much like Merlin, Sliver, Faction C2, yada yada yada. The only difference is that it uses covert channels over public platforms instead of standard communication over HTTP/HTTPS to attacker-controlled domains which can be detected very easily and also taken down in a jiffy. It's purpose is to make the life of Blue-teamers a lot-less easy! It is primarily aimed at professional red-teamers for red-team engagements. Modules can be written in Python and integrated at the click of a finger. The prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much. My main goal was to show everyone how easily social-media and public platforms can be exploited by malware to communicate with it's operators. Additional modules and advancement of existing ones coming soon, so stay tuned mates ;)
+LARRYCHATTER is a cross-platform C2 Framework. Much like Merlin, Sliver, Faction C2, yada yada yada. The only difference is that it uses covert channels over social media for command and control instead of standard communication over HTTP/HTTPS to attacker-controlled domains which can be detected very easily and also taken down in a jiffy. It's purpose is to make the life of Blue-teamers a lot-less easy! It is primarily aimed at professional red-teamers for red-team engagements. Modules can be written in Python and integrated at the click of a finger. The prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much. My main goal was to show everyone how easily social-media and public platforms can be exploited by malware to communicate with it's operators. Additional modules and advancement of existing ones coming soon, so stay tuned mates ;)
 
 ## Terminology:
 LARRYCHATTER Framework consists of:
@@ -30,7 +30,7 @@ This repository contains three source files:
 - ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
 
 ## Features:
-- No suspicious internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls)
+- No suspicious internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls/IDSs)
 - 'kill' module - Terminates the Implant on the target machine.
 - 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
 - Basic Steganography integrated.
@@ -68,6 +68,6 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 
 ## To Do:
 - [ ] Integrate Twitter Handle Generation Algorithm
-- [ ] Integrate AV Evasion Routines
+- [ ] Integrate basic AV Evasion Routines
 - [ ] Modify the 'recon' module to add more features
 - [ ] Integrate more advanced modules
