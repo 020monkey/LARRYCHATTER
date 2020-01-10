@@ -30,7 +30,7 @@ This repository contains three source files:
 - ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
 
 ## Features:
-- No suspicious internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls/IDSs)
+- No suspicious internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls/IDSs).
 Basically designed to mimic human behaviour so as to bypass network security products.
 - 'kill' module - Terminates the Implant on the target machine.
 - 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
