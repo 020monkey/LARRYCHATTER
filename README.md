@@ -68,7 +68,7 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 ### Note - Don't forget to change the Encryption keys!
 
 ## To Do:
-- [ ] Integrate Twitter Handle Generation Algorithm
+- [ ] Integrate Twitter Handle Generation Algorithm(Look at generateHandle.py)
 - [ ] Integrate basic AV Evasion Routines
 - [ ] Modify the 'recon' module to add more features
 - [ ] Integrate more advanced modules
