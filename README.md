@@ -6,9 +6,9 @@
 # LARRYCHATTER
 
 ## Introduction:
-Introducing a  super-stealthy extra sneaky Python-based C2 Framework that uses Twitter & Dropbox as a C2 Server.
-This project has been inspired by the Russian threat-group APT-29's own malware HAMMERTOSS tDiscoverer variant.
-In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. It's a lot similiar except that it's better.
+Introducing a Proof-of-Concept code for the Russian threat-group APT-29's HAMMERTOSS tDiscoverer malware.
+While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to create something like this and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
+In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similiar except that its better(maybe).
 
 ## A Simplified Block Diagram First:
 ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
@@ -17,30 +17,32 @@ In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation. In pure Python. I
 ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
 ## So What Is LARRYCHATTER Exactly?
-LARRYCHATTER is a cross-platform C2 Framework. Much like Merlin, Sliver, Faction C2, yada yada yada. The only difference is that it uses covert channels over social media for command and control instead of standard communication over HTTP/HTTPS to attacker-controlled domains which can be detected very easily and also taken down in a jiffy. It's purpose is to make the life of Blue-teamers a lot-less easy! It is primarily aimed at professional red-teamers for red-team engagements. Modules can be written in Python and integrated at the click of a finger. The prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much. My main goal was to show everyone how easily social-media and public platforms can be exploited by malware to communicate with it's operators. Additional modules and advancement of existing ones coming soon, so stay tuned mates ;)
+LARRYCHATTER is meant to be a PoC demonstrating the magical abilities of C2 over covert channels in social media. It is primarily aimed at professional red-teamers for red-team engagements and to make the life of Blue-teamers a lot-less easy! Modules can be written in Python and integrated at the click of a finger. The Prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much apart from a very basic system information collection. My main goal is to demonstrate how easily malware traffic can fly under the radar by utilizing legitimate traffic and mimicking normal human behaviour. Additional modules and advancement of existing ones as well as a full-fledged C2 framework which uses DNS-over-HTTPS(DoH) for data exfiltration is coming soon, so stay tuned ;)
 
 ## Terminology:
-LARRYCHATTER Framework consists of:
-- CommandPost - The software which is used to issue commands to the Implant run by the operator.
-- Implant - The main malware which is run on the target machine.
+LARRYCHATTER PoC consists of:
+- CommandPost - The LP which is used to issue commands to the Implant - run by the Operator.
+- Implant - The agent - run on the target machine.
 
-This repository contains three source files:
+This repository contains four source files:
 - ```LARRYCHATTER_CommandPost.py``` which is the source-code of the LARRYCHATTER Command Post(CP).
 - ```LARRYCHATTERImplant.py``` which is the source-code of the LARRYCHATTER Implant.
 - ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
+- ```generateHandle.py``` which contains the code for the Twitter Handle Generation Algorithm.
 
 ## Features:
-- No suspicious internet traffic to external unknown domains for C&C - Only traffic observed is Twitter and Dropbox! (Say buh-bye to those pesky firewalls/IDSs).
-Basically designed to mimic human behaviour so as to bypass network security products.
+- Stupid simple code - Easy to comprehend
+- No suspicious HTTP/HTTPS traffic to external, unknown domains for C&C - Only traffic observed is Twitter and Dropbox! Might aid in Firewall/IDS evasion since it is basically designed to mimic human behaviour so as to make the malware traffic appear legitimate in the hopes of bypassing network security solutions.
 - 'kill' module - Terminates the Implant on the target machine.
-- 'recon' module - Performs initial recon on the target system like basic system details, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file. Windows-support only. Very crude. No AV-Evasion subroutines. But fully functional and uploads collected Intel on a Dropbox account for retrieval by the operator later.
+- 'recon' module - Performs initial recon on the target system like basic system information, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file before uploading it to Dropbox for retrieval by the Operators later. Currently Windows support only. Very crude. No AV-Evasion subroutines but fully functional.
 - Basic Steganography integrated.
-- Hardcoded symmetric encryption support in-built with 128-bit AES in CBC Mode.
+- Hardcoded symmetric encryption support built-in using 128-bit AES in CBC Mode.
 - Coded in Python 3.
-- Single Implant support only by CommandPost since this is only the prototype.
+- Single Implant support only by CommandPost since this is only the Prototype version.
+- To test the Twitter Handle Generation Algorithm, you'd need multiple Twitter Developer API keys but linking the THGA with the code should be a breeze. For simplicity's sake, it doesn't come integrated so that everyone can test it easily.
 
 ## Etymology:
-So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you have seen the cute bird in the Twitter logo right? Well her name is Larry and since this Implant communicates over Twitter(chatter), I figured it's only appropiate I name it LARRYCHATTER.
+So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you have seen the cute bird in the Twitter logo right? Well it turns out her name is Larry and since this Implant communicates over Twitter(chatter), I figured it's only appropiate I name it LARRYCHATTER.
 
 ## Prerequisites:
 For this to work you will need:
@@ -49,7 +51,7 @@ Create an App with Read, Write access. Specifically note down the CONSUMER KEY, 
 Also note down the Handle/Username of your Twitter Account.
 - A Dropbox Account. (**Again please use a dedicated account! Do NOT use your personal one!**) 
 Generate an API Token. (Again not gon' explain how, pretty easy to figure it out)
-- A Machine with a Linux VM and a Windows 7/8/10 VM OR two separate machines
+- A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines
 
 ## Guide:
 1. Install the required Python dependencies on both machines.
@@ -68,7 +70,9 @@ Generate an API Token. (Again not gon' explain how, pretty easy to figure it out
 ### Note - Don't forget to change the Encryption keys!
 
 ## To Do:
-- [ ] Integrate Twitter Handle Generation Algorithm(Look at generateHandle.py)
-- [ ] Integrate basic AV Evasion Routines
 - [ ] Modify the 'recon' module to add more features
-- [ ] Integrate more advanced modules
+- [ ] Integrate different post-exploitation modules
+- [ ] Create Anti-Detection modules to detect Sandboxes/Debuggers etc
+- [ ] Add an Implant generator script to automate the process of building an executable from the python script
+- [ ] Add traditional C2 channel support as a backup measure
+- [ ] Create a full-fledged C2 framework
