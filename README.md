@@ -54,19 +54,19 @@ Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
 ## Guide to get it running in 9 easy steps:
-1. Install the required Python dependencies on both machines.
+Install the required Python dependencies on both machines.
 
 ```
 pip install -r requirements.txt
 ```
 
-2. Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
+Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
 
 ```
 python3 LARRYCHATTER_CommandPost.py
 ```
 
-3. Open `LARRYCHATTER_Implant.py` file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
+Open `LARRYCHATTER_Implant.py` file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
 
 ```
 pip install pyinstaller
