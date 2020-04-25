@@ -8,7 +8,7 @@
 ## Introduction:
 Introducing a Proof-of-Concept code for the Russian threat-group APT-29's HAMMERTOSS tDiscoverer malware.
 While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to replicate it and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
-In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similiar except that its better(maybe).
+In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similar except that its better(maybe).
 
 ## A Simplified Block Diagram First:
 ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
