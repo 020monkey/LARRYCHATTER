@@ -42,7 +42,7 @@ This repository contains four Python3 source files:
 - To test the Twitter Handle Generation Algorithm, you'd need multiple Twitter Developer API keys but linking the THGA with the code should be a breeze. For simplicity's sake, it doesn't come integrated so that everyone can test it easily.
 
 ## Etymology:
-So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you have seen the cute bird in the Twitter logo right? Well it turns out her name is Larry and since this Implant communicates over Twitter(chatter), I figured it's only appropiate I name it LARRYCHATTER.
+So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So have you seen the cute bird in the Twitter logo? Well it turns out her name is Larry and since this Implant communicates(chatter) over Twitter, I figured it's only appropiate I name it LARRYCHATTER.
 
 ## Prerequisites:
 For this to work you will need:
@@ -53,7 +53,7 @@ Also note down the Handle/Username of your Twitter Account.
 Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
-## Guide to get it running in 9 easy steps:
+## Guide to test the PoC in 9 easy steps:
 Install the required Python dependencies on both machines.
 
 ```
