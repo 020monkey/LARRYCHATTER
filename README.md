@@ -24,7 +24,7 @@ LARRYCHATTER PoC consists of:
 - CommandPost - The LP which is used to issue commands to the Implant - run by the Operator.
 - Implant - The agent - run on the target machine.
 
-This repository contains four source files:
+This repository contains four Python3 source files:
 - `LARRYCHATTER_CommandPost.py` which is the source-code of the LARRYCHATTER Command Post(CP).
 - `LARRYCHATTERImplant.py` which is the source-code of the LARRYCHATTER Implant.
 - `decrypter.py` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
@@ -58,20 +58,20 @@ Generate an API Token. Again, a pretty easy task.
 ```
 pip install -r requirements.txt
 ```
-1. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
-```
-python3 LARRYCHATTER_CommandPost.py
-```
-1. Open the LARRYCHATTER_Implant.py file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
+2. Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
+ ```
+ python3 LARRYCHATTER_CommandPost.py
+ ```
+3. Open `LARRYCHATTER_Implant.py` file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
 ```
 pip install pyinstaller
 pyinstaller -F -w LARRYCHATTER_Implant.py
 ```
-1. Run the ***recon*** command on the Command Post and follow the on-screen instructions. A sample image named ***caravaggio.jpg*** is included in the repository. The file-size must be less than 5MB for the PoC to work.
-1. Wait for some time for the Implant to do its job and collect the intel.
-1. Check Dropbox for the intel ZIP file, download and extract it on operator machine.
-1. Run ***kill*** command on the Command Post to kill the Implant on the target machine when you are done.
-1. Decrypt the intel with the help of the decrypter.py and Profit!
+4. Run the ***recon*** command on the Command Post and follow the on-screen instructions. A sample image named ***caravaggio.jpg*** is included in the repository. The file-size must be less than 5MB for the PoC to work.
+5. Wait for some time for the Implant to do its job and collect the intel.
+6. Check Dropbox for the intel ZIP file, download and extract it on operator machine.
+7. Run ***kill*** command on the Command Post to kill the Implant on the target machine when you are done.
+8. Decrypt the intel with the help of the `decrypter.py` and Profit!
 
 ### Note - Don't forget to change the Encryption keys!
 
