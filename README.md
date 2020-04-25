@@ -53,25 +53,32 @@ Also note down the Handle/Username of your Twitter Account.
 Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
-## Guide to get it running in 8 easy steps:
+## Guide to get it running in 9 easy steps:
 1. Install the required Python dependencies on both machines.
+
 ```
 pip install -r requirements.txt
 ```
+
 2. Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
- ```
- python3 LARRYCHATTER_CommandPost.py
- ```
+
+```
+python3 LARRYCHATTER_CommandPost.py
+```
+
 3. Open `LARRYCHATTER_Implant.py` file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
+
 ```
 pip install pyinstaller
 pyinstaller -F -w LARRYCHATTER_Implant.py
 ```
-4. Run the ***recon*** command on the Command Post and follow the on-screen instructions. A sample image named ***caravaggio.jpg*** is included in the repository. The file-size must be less than 5MB for the PoC to work.
-5. Wait for some time for the Implant to do its job and collect the intel.
-6. Check Dropbox for the intel ZIP file, download and extract it on operator machine.
-7. Run ***kill*** command on the Command Post to kill the Implant on the target machine when you are done.
-8. Decrypt the intel with the help of the `decrypter.py` and Profit!
+
+4. Execute the binary generated in the previous step on the Windows VM.
+5. Run the `recon` command on the Command Post and follow the on-screen instructions. A sample image named `caravaggio.jpg` is included in the repository. The file-size must be less than **5MB** for the PoC to work.
+6. Wait for some time for the Implant to do its job and collect the intel.
+7. Check Dropbox for the intel ZIP file, download and extract it on operator machine.
+8. Run `kill` command on the Command Post to kill the Implant on the target machine when you are done.
+9. Decrypt the intel with the help of the `decrypter.py` and Profit!!
 
 ### Note - Don't forget to change the Encryption keys!
 
