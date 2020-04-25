@@ -8,7 +8,7 @@
 ## Introduction:
 Introducing a Proof-of-Concept code for the Russian threat-group APT-29's HAMMERTOSS tDiscoverer malware.
 While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to replicate it and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
-In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similar except that its better(maybe).
+In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similar except that it is better(maybe).
 
 ## A Simplified Block Diagram First:
 ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
@@ -25,8 +25,8 @@ LARRYCHATTER PoC consists of:
 - Implant - The agent - run on the target machine.
 
 This repository contains four Python3 source files:
-- `LARRYCHATTER_CommandPost.py` which is the source-code of the LARRYCHATTER Command Post(CP).
-- `LARRYCHATTERImplant.py` which is the source-code of the LARRYCHATTER Implant.
+- `LARRYCHATTER_CommandPost.py` which is the source code of the LARRYCHATTER Command Post(CP).
+- `LARRYCHATTERImplant.py` which is the source code of the LARRYCHATTER Implant.
 - `decrypter.py` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
 - `generateHandle.py` which contains the code for the Twitter Handle Generation Algorithm.
 
@@ -34,7 +34,7 @@ This repository contains four Python3 source files:
 - Stupid simple code - Easy to comprehend
 - No suspicious HTTP/HTTPS traffic to external, unknown domains for C&C - Only traffic observed is Twitter and Dropbox! Might aid in Firewall/IDS evasion since it is basically designed to mimic human behaviour so as to make the malware traffic appear legitimate in the hopes of bypassing network security solutions.
 - 'kill' module - Terminates the Implant on the target machine.
-- 'recon' module - Performs initial recon on the target system like basic system information, patches installed, takes screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file before uploading it to Dropbox for retrieval by the Operators later. Currently Windows support only. Very crude. No AV-Evasion subroutines but fully functional.
+- 'recon' module - Performs initial recon on the target system like basic system information, patches installed, take screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file before uploading it to Dropbox for retrieval by the Operators later. Currently Windows support only. Very crude. No AV-Evasion subroutines but fully functional.
 - Basic Steganography integrated.
 - Hardcoded symmetric encryption support built-in using 128-bit AES in CBC Mode.
 - Coded in Python 3.
@@ -42,13 +42,13 @@ This repository contains four Python3 source files:
 - To test the Twitter Handle Generation Algorithm, you'd need multiple Twitter Developer API keys but linking the THGA with the code should be a breeze. For simplicity's sake, it doesn't come integrated so that everyone can test it easily.
 
 ## Etymology:
-So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So have you seen the cute bird in the Twitter logo? Well it turns out her name is Larry and since this Implant communicates(chatter) over Twitter, I figured it's only appropiate I name it LARRYCHATTER.
+So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So have you seen the cute bird in the Twitter logo? Well it turns out her name is Larry and since this Implant communicates(chatter) over Twitter, I figured it's only appropriate I name it LARRYCHATTER.
 
 ## Prerequisites:
 For this to work you will need:
 - A Twitter Dev Account (**Please use a dedicated account! Do NOT use your personal one!**)
 Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values. This should be fairly easy to do.
-Also note down the Handle/Username of your Twitter Account.
+Also, note down the Handle/Username of your Twitter Account.
 - A Dropbox Account. (**Again, please use a dedicated account! Do NOT use your personal one!**) 
 Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
@@ -60,7 +60,7 @@ Install the required Python dependencies on both machines.
 pip install -r requirements.txt
 ```
 
-Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
+Run `LARRYCHATTER_CommandPost.py` on the Linux VM(operator machine) and follow the instructions therein. Type `help` for further assistance.
 
 ```
 python3 LARRYCHATTER_CommandPost.py
