@@ -7,7 +7,7 @@
 
 ## Introduction:
 Introducing a Proof-of-Concept code for the Russian threat-group APT-29's HAMMERTOSS tDiscoverer malware.
-While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to create something like this and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
+While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to replicate it and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
 In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similiar except that its better(maybe).
 
 ## A Simplified Block Diagram First:
@@ -25,10 +25,10 @@ LARRYCHATTER PoC consists of:
 - Implant - The agent - run on the target machine.
 
 This repository contains four source files:
-- ```LARRYCHATTER_CommandPost.py``` which is the source-code of the LARRYCHATTER Command Post(CP).
-- ```LARRYCHATTERImplant.py``` which is the source-code of the LARRYCHATTER Implant.
-- ```decrypter.py``` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
-- ```generateHandle.py``` which contains the code for the Twitter Handle Generation Algorithm.
+- `LARRYCHATTER_CommandPost.py` which is the source-code of the LARRYCHATTER Command Post(CP).
+- `LARRYCHATTERImplant.py` which is the source-code of the LARRYCHATTER Implant.
+- `decrypter.py` to decrypt the Intel collected by the Implant from the target machine and uploaded to Dropbox.
+- `generateHandle.py` which contains the code for the Twitter Handle Generation Algorithm.
 
 ## Features:
 - Stupid simple code - Easy to comprehend
@@ -47,25 +47,31 @@ So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So you
 ## Prerequisites:
 For this to work you will need:
 - A Twitter Dev Account (**Please use a dedicated account! Do NOT use your personal one!**)
-Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values (I am not gon' tell you guys how, go Google it, should be a pretty easy thing to do).
+Create an App with Read, Write access. Specifically note down the CONSUMER KEY, CONSUMER SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET values. This should be fairly easy to do.
 Also note down the Handle/Username of your Twitter Account.
-- A Dropbox Account. (**Again please use a dedicated account! Do NOT use your personal one!**) 
-Generate an API Token. (Again not gon' explain how, pretty easy to figure it out)
-- A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines
+- A Dropbox Account. (**Again, please use a dedicated account! Do NOT use your personal one!**) 
+Generate an API Token. Again, a pretty easy task.
+- A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
-## Guide:
+## Guide to get it running in 8 easy steps:
 1. Install the required Python dependencies on both machines.
-- `pip install -r requirements.txt`
-2. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type help for further assistance.
-- `python3 LARRYCHATTER_CommandPost.py`
-3. Open the LARRYCHATTER_Implant.py file and modify the variable 'handle' to your created Twitter username and then run the LARRYCHATTER_Implant.py on the Windows VM(target machine).
-- `python LARRYCHATTER_Implant.py`
-4. Run 'recon' module on the Command Post and follow the on-screen instructions. A sample image is included in the repo. The file-size must be less than 5MB for the Framework to work.
-5. Wait for some time for the Implant to collect the intel.
-6. Check the Dropbox Files section for the uploaded intel.
-7. Check Dropbox for the intel ZIP file, download it and extract it on operator machine.
-8. Run 'kill' module on the Command Post to kill the Implant on the target machine.
-9. Decrypt the intel with the help of the decrypter.py and Profit!
+```
+pip install -r requirements.txt
+```
+1. Run the LARRYCHATTER_CommandPost.py on the Linux VM(operator machine) and follow the instructions herein. Type `help` for further assistance.
+```
+python3 LARRYCHATTER_CommandPost.py
+```
+1. Open the LARRYCHATTER_Implant.py file from the Windows VM, modify the variable ***handle*** to your created Twitter username and type this to spit out a Windows executable from the Python script:
+```
+pip install pyinstaller
+pyinstaller -F -w LARRYCHATTER_Implant.py
+```
+1. Run the ***recon*** command on the Command Post and follow the on-screen instructions. A sample image named ***caravaggio.jpg*** is included in the repository. The file-size must be less than 5MB for the PoC to work.
+1. Wait for some time for the Implant to do its job and collect the intel.
+1. Check Dropbox for the intel ZIP file, download and extract it on operator machine.
+1. Run ***kill*** command on the Command Post to kill the Implant on the target machine when you are done.
+1. Decrypt the intel with the help of the decrypter.py and Profit!
 
 ### Note - Don't forget to change the Encryption keys!
 
