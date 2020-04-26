@@ -73,7 +73,7 @@ Also, note down the Handle/Username of your Twitter Account.
 Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
-## Guide to test the PoC in 9 easy steps:
+## Guide to test the PoC in 10 easy steps:
 Clone the repository using:
 
 ```
