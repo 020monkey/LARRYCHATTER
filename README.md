@@ -19,10 +19,13 @@ In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. I
 ## So What Is LARRYCHATTER Exactly?
 LARRYCHATTER is meant to be a PoC demonstrating the magical abilities of C2 over covert channels in social media. It is primarily aimed at professional red-teamers for red-team engagements and to make the life of Blue-teamers a lot-less easy! Modules can be written in Python and integrated at the click of a finger. The Prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much apart from a very basic system information collection. My main goal is to demonstrate how easily malware traffic can fly under the radar by utilizing legitimate traffic and mimicking normal human behaviour. Additional modules and advancement of existing ones as well as a full-fledged C2 framework which uses DNS-over-HTTPS(DoH) for data exfiltration is coming soon, so stay tuned ;)
 
-## A demo of the CommandPost:
+## A demo of the PoC CommandPost:
 ![gif](larrychatter.gif)
 
 I guess I was too lazy to blur out the API keys but don't bother using them because they have been revoked. So please create your own :)
+
+## VT scan of the PoC Implant:
+![vt-scan](vt-scan.png)
 
 ## Terminology:
 LARRYCHATTER PoC consists of:
