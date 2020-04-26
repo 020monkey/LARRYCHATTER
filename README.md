@@ -13,6 +13,8 @@ In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. I
 ## A Simplified Block Diagram First:
 ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
 
+![gif](larrychatter.gif)
+
 ## Another One Of Twitter Handle Generation Algorithm:
 ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
@@ -32,6 +34,7 @@ This repository contains four Python3 source files:
 
 ## Features:
 - Stupid simple code - Easy to comprehend
+- Nothing needs to be hardcoded on the Implant side including API keys which makes it resilient to account takedowns etc.
 - No suspicious HTTP/HTTPS traffic to external, unknown domains for C&C - Only traffic observed is Twitter and Dropbox! Might aid in Firewall/IDS evasion since it is basically designed to mimic human behaviour so as to make the malware traffic appear legitimate in the hopes of bypassing network security solutions.
 - 'kill' module - Terminates the Implant on the target machine.
 - 'recon' module - Performs initial recon on the target system like basic system information, patches installed, take screenshots on a random interval for 'x' minutes and searches for all types of juicy file-types for exfiltration later and encrypts all the collected Intel and zips it into a single file before uploading it to Dropbox for retrieval by the Operators later. Currently Windows support only. Very crude. No AV-Evasion subroutines but fully functional.
