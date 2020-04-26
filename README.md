@@ -25,7 +25,7 @@ LARRYCHATTER is meant to be a PoC demonstrating the magical abilities of C2 over
 I guess I was too lazy to blur out the API keys but don't bother using them because they have been revoked. So please create your own :)
 
 ## VT scan of the PoC Implant:
-![vt-scan](vt-scan.png)
+![vt-scan](vt-scan.PNG)
 
 ## Terminology:
 LARRYCHATTER PoC consists of:
