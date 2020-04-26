@@ -50,6 +50,8 @@ This repository contains four Python3 source files:
 - Single Implant support only by CommandPost since this is only the Prototype version.
 - To test the Twitter Handle Generation Algorithm, you'd need multiple Twitter Developer API keys but linking the THGA with the code should be a breeze. For simplicity's sake, it doesn't come integrated so that everyone can test it easily.
 
+P.S. - I have added comments wherever I can but the code is still messy as hell. It is even stupid perhaps and could be made better in many ways but hey, it works!
+
 ## Etymology:
 So y'all might be wondering what sort of a peculiar name is LARRYCHATTER? So have you seen the cute bird in the Twitter logo? Well it turns out her name is Larry and since this Implant communicates(chatter) over Twitter, I figured it's only appropriate I name it LARRYCHATTER.
 
