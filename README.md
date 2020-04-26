@@ -10,14 +10,23 @@ Introducing a Proof-of-Concept code for the Russian threat-group APT-29's HAMMER
 While reading the excellent report by FireEye, I was impressed with the idea so much that I decided to replicate it and that was the birth of LARRYCHATTER. This concept, although nothing new, is not seen a lot especially with nation-state APTs like APT-29. The other I can think of is the Indian Patchwork team though I am sure there might be others too with the same trick up their sleeves.
 In fact, LARRYCHATTER is HAMMERTOSS Revenant. A Reincarnation in pure Python3. It's a lot similar except that it is better(maybe).
 
+## So What Is LARRYCHATTER Exactly?
+LARRYCHATTER is meant to be a PoC demonstrating the magical abilities of C2 over covert channels in social media. It is primarily aimed at professional red-teamers for red-team engagements and to make the life of Blue-teamers a lot-less easy! Modules can be written in Python and integrated at the click of a finger. The Prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much apart from a very basic system information collection. My main goal is to demonstrate how easily malware traffic can fly under the radar by utilizing legitimate traffic and mimicking normal human behaviour. Additional modules and advancement of existing ones as well as a full-fledged C2 framework which uses DNS-over-HTTPS(DoH) for data exfiltration is coming soon, so stay tuned ;)
+
 ## A Simplified Block Diagram First:
 ![screenshot](LARRYCHATTER_Simplified_Block_Diagram.png)
 
 ## Another One Of Twitter Handle Generation Algorithm:
 ![screenshot](LARRYCHATTER_Twitter_Handle_Generation_Algorithm.png)
 
-## So What Is LARRYCHATTER Exactly?
-LARRYCHATTER is meant to be a PoC demonstrating the magical abilities of C2 over covert channels in social media. It is primarily aimed at professional red-teamers for red-team engagements and to make the life of Blue-teamers a lot-less easy! Modules can be written in Python and integrated at the click of a finger. The Prototype version of LARRYCHATTER comes with two modules - a 'recon' module and a 'kill' module in-built which is albeit very crude and doesn't do much apart from a very basic system information collection. My main goal is to demonstrate how easily malware traffic can fly under the radar by utilizing legitimate traffic and mimicking normal human behaviour. Additional modules and advancement of existing ones as well as a full-fledged C2 framework which uses DNS-over-HTTPS(DoH) for data exfiltration is coming soon, so stay tuned ;)
+So the CommandPost and the Implant are kept in sync through the use of the THGA which is basically a pseudo-random string generator making the prediction of the next day's handle very difficult using statistical analysis alone.
+
+## How it works:
+Assume the operator wants to communicate with the agent on say day 'X', they will have to register that handle on Twitter beforehand and of course, only they would know what the handle for day 'X' should be. After that, they will use the CommandPost to send their desired command which is first encrypted and then embedded in an image before it is tweeted from that handle.
+
+The Implant/agent generates a Twitter handle every 24 hours and checks if it is a registered one and if so then it will visit the profile, download the image, decode the encrypted text embedded steganographically, decrypt the text to get the command and perform that routine.
+
+This way nothing has to be hard-coded on the Implant side which increases its resiliency to account takedowns and ensures Implant longevity on a host machine.
 
 ## A demo of the PoC CommandPost:
 ![gif](larrychatter.gif)
@@ -39,7 +48,7 @@ This repository contains four Python3 source files:
 - `generateHandle.py` which contains the code for the Twitter Handle Generation Algorithm.
 
 ## Features:
-- Stupid simple code - Easy to comprehend
+- Stupid simple logic behind the code - Easy to comprehend and replicate in your own C2 projects
 - Nothing needs to be hardcoded on the Implant side including API keys which makes it resilient to account takedowns etc.
 - No suspicious HTTP/HTTPS traffic to external, unknown domains for C&C - Only traffic observed is Twitter and Dropbox! Might aid in Firewall/IDS evasion since it is basically designed to mimic human behaviour so as to make the malware traffic appear legitimate in the hopes of bypassing network security solutions.
 - 'kill' module - Terminates the Implant on the target machine.
