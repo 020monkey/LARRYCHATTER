@@ -48,7 +48,7 @@ This repository contains four Python3 source files:
 - `generateHandle.py` which contains the code for the Twitter Handle Generation Algorithm.
 
 ## Features:
-- Stupid simple logic behind the code - Easy to comprehend and replicate in your own C2 projects
+- Stupid simple logic behind the code - Easy to comprehend and replicate in your own C2 projects.
 - Nothing needs to be hardcoded on the Implant side including API keys which makes it resilient to account takedowns etc.
 - No suspicious HTTP/HTTPS traffic to external, unknown domains for C&C - Only traffic observed is Twitter and Dropbox! Might aid in Firewall/IDS evasion since it is basically designed to mimic human behaviour so as to make the malware traffic appear legitimate in the hopes of bypassing network security solutions.
 - 'kill' module - Terminates the Implant on the target machine.
@@ -74,6 +74,12 @@ Generate an API Token. Again, a pretty easy task.
 - A Linux VM and a Windows 7/8/10 VM with Python3 installed on both the machines.
 
 ## Guide to test the PoC in 9 easy steps:
+Clone the repository using:
+
+```
+git clone https://github.com/slaeryan/LARRYCHATTER.git
+```
+
 Install the required Python dependencies on both machines.
 
 ```
